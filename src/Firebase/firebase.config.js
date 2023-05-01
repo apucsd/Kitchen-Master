@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB_PB5WHANIbkNu8HiV7Qlc4gK82lg_Qhw",
-  authDomain: "kitchen-master-284e7.firebaseapp.com",
-  projectId: "kitchen-master-284e7",
-  storageBucket: "kitchen-master-284e7.appspot.com",
-  messagingSenderId: "960110707570",
-  appId: "1:960110707570:web:f6108d0277f8a6eda953eb",
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase
