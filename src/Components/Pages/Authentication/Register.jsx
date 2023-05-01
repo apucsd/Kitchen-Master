@@ -23,6 +23,11 @@ const Register = () => {
     if (password.length < 6) {
       return Swal.fire("Password must be at least 6 characters");
     }
+
+    /////email validation
+    if (!/[^\s@]+@[^\s@]+\.[^\s@]+/.test(email)) {
+      return Swal.fire("Enter a valid email");
+    }
     createUser(email, password)
       .then((result) => {
         updateProfile(result.user, {

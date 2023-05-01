@@ -16,7 +16,7 @@ const Login = () => {
         console.log(result.user);
       })
       .catch((error) => {
-        Swal.fire(error.message.split(":")[1]);
+        Swal.fire("User email and password doesn't match");
       });
   };
   return (
