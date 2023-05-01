@@ -15,7 +15,7 @@ const githubProvider = new GithubAuthProvider();
 export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
   const createUser = (email, password) => {
-    return createUserWithEmailAndPassword();
+    return createUserWithEmailAndPassword(auth, email, password);
   };
   const googleSignIn = () => {
     return signInWithPopup(auth, googleProvider);

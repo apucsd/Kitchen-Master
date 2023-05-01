@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2/dist/sweetalert2.js";
 import "sweetalert2/dist/sweetalert2.css";
+import { AuthContext } from "../../../Providers/AuthProvider";
+import { updateProfile } from "firebase/auth";
 const Register = () => {
+  const { createUser, googleSignIn, githubSignIn } = useContext(AuthContext);
   const handleRegister = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -20,9 +23,39 @@ const Register = () => {
     if (password.length < 6) {
       return Swal.fire("Password must be at least 6 characters");
     }
-    if (name && email && password && confirmPassword && photoURL) {
-      console.log("all ok");
-    }
+    createUser(email, password)
+      .then((result) => {
+        updateProfile(result.user, {
+          displayName: name,
+          photoURL: photoURL,
+        });
+        Swal.fire("Your account has been created");
+        console.log(result.user);
+      })
+      .catch((error) => {
+        Swal.fire(error.message.split(":")[1]);
+      });
+  };
+
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then((result) => {
+        Swal.fire("Your account has been created");
+        console.log(result.user);
+      })
+      .catch((error) => {
+        Swal.fire(error.message.split(":")[1]);
+      });
+  };
+  const handleGithubSignIn = () => {
+    githubSignIn()
+      .then((result) => {
+        Swal.fire("Your account has been created");
+        console.log(result.user);
+      })
+      .catch((error) => {
+        Swal.fire(error.message.split(":")[1]);
+      });
   };
   return (
     <div>
@@ -114,6 +147,7 @@ const Register = () => {
             </div>
             <div className="my-6 space-y-2">
               <button
+                onClick={handleGoogleSignIn}
                 aria-label="Login with Google"
                 type="button"
                 className="flex items-center justify-center w-full p-2 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 focus:ring-gray-400"
@@ -128,6 +162,7 @@ const Register = () => {
                 <p>Login with Google</p>
               </button>
               <button
+                onClick={handleGithubSignIn}
                 aria-label="Login with GitHub"
                 role="button"
                 className="flex items-center justify-center w-full p-2 space-x-4 border rounded-md focus:ring-2 focus:ring-offset-1 focus:ring-gray-400"
