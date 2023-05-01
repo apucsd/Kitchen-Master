@@ -1,16 +1,23 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Providers/AuthProvider";
-
+import Swal from "sweetalert2/dist/sweetalert2.js";
+import "sweetalert2/dist/sweetalert2.css";
 const Login = () => {
-  const { user } = useContext(AuthContext);
+  const { user, logIn } = useContext(AuthContext);
   const handleLogin = (event) => {
     event.preventDefault();
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
-
-    console.log(email, password);
+    logIn(email, password)
+      .then((result) => {
+        Swal.fire("Your login has been succeeded");
+        console.log(result.user);
+      })
+      .catch((error) => {
+        Swal.fire(error.message.split(":")[1]);
+      });
   };
   return (
     <div>
