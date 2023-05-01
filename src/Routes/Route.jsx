@@ -5,6 +5,9 @@ import MainLayout from "../Layouts/MainLayout";
 import Home from "../Components/Home/Home";
 import Blog from "../Components/Pages/Blog";
 import Error from "../Components/Pages/Error page/Error";
+import Login from "../Components/Pages/Authentication/Login";
+import Register from "../Components/Pages/Authentication/Register";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,8 +27,12 @@ const router = createBrowserRouter([
         element: <Blog></Blog>,
       },
       {
-        path: "/login",
-        element: <Blog></Blog>,
+        path: "login",
+        element: <Login></Login>,
+      },
+      {
+        path: "register",
+        element: <Register></Register>,
       },
     ],
   },
