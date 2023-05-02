@@ -5,7 +5,7 @@ const Banner = () => {
   return (
     <div className="grid md:grid-cols-2 gap-4 items-center justify-center font-propines">
       <div>
-        <Lottie className="h-[100vh]" animationData={chef} loop={true} />
+        <Lottie className="md:h-[100vh]" animationData={chef} loop={true} />
       </div>
       <div className="text-start px-4">
         <h2 className="text-4xl font-semibold">
