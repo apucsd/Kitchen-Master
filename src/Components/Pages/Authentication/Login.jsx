@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import Swal from "sweetalert2/dist/sweetalert2.js";
 import "sweetalert2/dist/sweetalert2.css";
+import RegisterWith from "./RegisterWith";
 const Login = () => {
   const { user, logIn } = useContext(AuthContext);
   const handleLogin = (event) => {
@@ -69,6 +70,7 @@ const Login = () => {
               <button className="btn btn-block">Login</button>
             </div>
           </form>
+          <RegisterWith></RegisterWith>
         </div>
       </div>
     </div>
