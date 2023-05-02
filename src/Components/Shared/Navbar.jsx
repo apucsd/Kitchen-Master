@@ -32,7 +32,7 @@ const Navbar = () => {
     <div className=" bg-slate-100 font-propines">
       <div className="md:flex items-center justify-between mx-8">
         <div>
-          <Link to="/" className="text-3xl font-mono font-semibold">
+          <Link to="/" className="text-3xl text-fuchsia-500 font-semibold">
             Kitchen <br /> Master
           </Link>
         </div>
