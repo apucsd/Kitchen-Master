@@ -6,7 +6,7 @@ import { AuthContext } from "../../../Providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import RegisterWith from "./RegisterWith";
 const Register = () => {
-  const { createUser, googleSignIn, githubSignIn } = useContext(AuthContext);
+  const { createUser } = useContext(AuthContext);
   const handleRegister = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -36,10 +36,10 @@ const Register = () => {
           photoURL: photoURL,
         });
         Swal.fire("Your account has been created");
-        console.log(result.user);
+        // console.log(result.user);
       })
       .catch((error) => {
-        Swal.fire(error.message.split(":")[1]);
+        console.log(error);
       });
   };
 

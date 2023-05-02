@@ -1,22 +1,27 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import Swal from "sweetalert2/dist/sweetalert2.js";
 import "sweetalert2/dist/sweetalert2.css";
 import RegisterWith from "./RegisterWith";
 const Login = () => {
-  const { user, logIn } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const from = location.state?.from?.pathname;
+  // console.log(location);
+  const { logIn } = useContext(AuthContext);
   const handleLogin = (event) => {
     event.preventDefault();
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
     logIn(email, password)
-      .then((result) => {
+      .then(() => {
         Swal.fire("Your login has been succeeded");
-        console.log(result.user);
+        navigate(from, { replace: true });
       })
-      .catch((error) => {
+      .catch(() => {
         Swal.fire("User email and password doesn't match");
       });
   };

@@ -1,12 +1,19 @@
 import React, { useContext } from "react";
+import Swal from "sweetalert2/dist/sweetalert2.js";
+import "sweetalert2/dist/sweetalert2.css";
 import { AuthContext } from "../../../Providers/AuthProvider";
+import { useLocation, useNavigate } from "react-router-dom";
 const RegisterWith = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const from = location.state?.from?.pathname;
   const { googleSignIn, githubSignIn } = useContext(AuthContext);
   const handleGoogleSignIn = () => {
     googleSignIn()
       .then((result) => {
         Swal.fire("Your account has been created");
-        console.log(result.user);
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         Swal.fire(error.message.split(":")[1]);
@@ -16,7 +23,7 @@ const RegisterWith = () => {
     githubSignIn()
       .then((result) => {
         Swal.fire("Your account has been created");
-        console.log(result.user);
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         Swal.fire(error.message.split(":")[1]);
