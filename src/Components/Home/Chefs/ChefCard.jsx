@@ -1,5 +1,6 @@
 import React from "react";
 import { HiHandThumbUp } from "react-icons/hi2";
+import { Link } from "react-router-dom";
 const ChefCard = ({ chef }) => {
   const {
     id,
@@ -34,8 +35,10 @@ const ChefCard = ({ chef }) => {
             {likes}
           </span>
         </div>
-        <div className="card-actions">
-          <button className="btn btn-warning w-full">View recipes</button>
+        <div className="card-actions w-full">
+          <Link className="w-full" to={`chef-recipes/${id}`}>
+            <button className="btn btn-warning  w-full">View recipes</button>
+          </Link>
         </div>
       </div>
     </div>
