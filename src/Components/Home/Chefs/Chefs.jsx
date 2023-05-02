@@ -8,7 +8,7 @@ const Chefs = () => {
       .then((res) => res.json())
       .then((data) => setChefs(data.chefs));
   }, []);
-  console.log(chefs);
+  // console.log(chefs);
   return (
     <div className=" my-12">
       <h3 className="text-center my-2 text-2xl font-semibold font-sans">
