@@ -12,7 +12,7 @@ import { Pagination, Navigation } from "swiper";
 
 const FeedBack = () => {
   return (
-    <div className="w-1/2 mx-auto my-8 bg-white rounded p-4">
+    <div className="md:w-1/2 mx-auto my-8 bg-white rounded p-4">
       <div className="text-center my-8">
         <h2 className=" text-xl">----CUSTOMER FEEDBACK----</h2>
         <h1 className="text-4xl font-serif  my-4">
@@ -28,9 +28,9 @@ const FeedBack = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className="shadow-lg p-20">
+          <div className="shadow-lg md:md:md:p-20 p-12 ">
             <h1>
-              First time in Chefmaster and YOU have to go! It's the cutest
+              First time in Chef Master and YOU have to go! It's the cutest
               little spot with amazing food. The Foie Gras is to die for. IT WAS
               FIRE!! The service we received was so amazing and we will
               definitely be back again. They made us feel welcomed and gave us
@@ -45,35 +45,35 @@ const FeedBack = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="shadow-lg p-20">
+          <div className="shadow-lg md:md:md:p-20 p-12 ">
             <h1>
-              First time in Chefmaster and YOU have to go! It's the cutest
+              First time in Chef Master and YOU have to go! It's the cutest
               little spot with amazing food. The Foie Gras is to die for. IT WAS
               FIRE!! The service we received was so amazing and we will
               definitely be back again. They made us feel welcomed and gave us
               an amazing experience
             </h1>
             <div>
-              <h4 className="font-semibold mt-4">Rakesh Khanna</h4>
+              <h4 className="font-semibold mt-4">Priya Das</h4>
               <p>
-                <small>Fashion Designer</small>
+                <small>Makeup Designer</small>
               </p>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="shadow-lg p-20">
+          <div className="shadow-lg md:md:md:p-20 p-12 ">
             <h1>
-              First time in Chefmaster and YOU have to go! It's the cutest
+              First time in Chef Master and YOU have to go! It's the cutest
               little spot with amazing food. The Foie Gras is to die for. IT WAS
               FIRE!! The service we received was so amazing and we will
               definitely be back again. They made us feel welcomed and gave us
               an amazing experience
             </h1>
             <div>
-              <h4 className="font-semibold mt-4">Rakesh Khanna</h4>
+              <h4 className="font-semibold mt-4">Suresh Raj</h4>
               <p>
-                <small>Fashion Designer</small>
+                <small>Engineer</small>
               </p>
             </div>
           </div>
