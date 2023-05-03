@@ -70,7 +70,10 @@ const Navbar = () => {
               >
                 <ul className=" flex md:flex-col bg-base-100 shadow-lg border p-4 text-start">
                   <li onClick={() => setMouseOver(false)} className="">
-                    <Link className="block px-4  whitespace-nowrap py-2 hover:bg-gray-100">
+                    <Link
+                      to="/userDetails"
+                      className="block px-4  whitespace-nowrap py-2 hover:bg-gray-100"
+                    >
                       {user?.displayName}
                     </Link>
                   </li>
