@@ -11,5 +11,6 @@
 
   > - Home
   > - Blog
+  > - User profile
 
 - Live Link: https://kitchen-master-284e7.web.app/

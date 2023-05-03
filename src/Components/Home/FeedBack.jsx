@@ -12,7 +12,7 @@ import { Pagination, Navigation } from "swiper";
 
 const FeedBack = () => {
   return (
-    <div className="md:w-1/2 mx-auto my-8 bg-white rounded p-4">
+    <div className="md:w-1/2 mx-auto my-8 bg-white rounded md:p-4">
       <div className="text-center my-8">
         <h2 className=" text-xl">----CUSTOMER FEEDBACK----</h2>
         <h1 className="text-4xl font-serif  my-4">
@@ -28,7 +28,7 @@ const FeedBack = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className="shadow-lg md:md:md:p-20 p-12 ">
+          <div className="shadow-lg md:md:md:p-20 p-3 ">
             <h1>
               First time in Chef Master and YOU have to go! It's the cutest
               little spot with amazing food. The Foie Gras is to die for. IT WAS
@@ -45,7 +45,7 @@ const FeedBack = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="shadow-lg md:md:md:p-20 p-12 ">
+          <div className="shadow-lg md:md:md:p-20 p-3 ">
             <h1>
               First time in Chef Master and YOU have to go! It's the cutest
               little spot with amazing food. The Foie Gras is to die for. IT WAS
@@ -62,7 +62,7 @@ const FeedBack = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="shadow-lg md:md:md:p-20 p-12 ">
+          <div className="shadow-lg md:md:md:p-20 p-3 ">
             <h1>
               First time in Chef Master and YOU have to go! It's the cutest
               little spot with amazing food. The Foie Gras is to die for. IT WAS

@@ -22,8 +22,8 @@ const Chefs = () => {
   }
   return (
     <div className=" my-12">
-      <h3 className="text-center my-2 text-2xl font-semibold font-sans">
-        Our Chefs
+      <h3 className="text-center my-2 text-3xl font-semibold font-sans">
+        Our Master Chefs
       </h3>
       <hr className="w-[30%] mx-auto" />
       <div className="grid md:grid-cols-3 justify-center md:mx-12 mx-4 gap-4 my-8">

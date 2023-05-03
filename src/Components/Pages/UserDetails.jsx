@@ -18,7 +18,7 @@ const UserDetails = () => {
 
   //   console.log(user);
   return (
-    <div className="flex gap-1 m-8">
+    <div className="md:flex gap-1 m-8">
       <div>
         <img
           className="w-80 border-2 rounded border-slate-400"
@@ -26,7 +26,7 @@ const UserDetails = () => {
           alt=""
         />
       </div>
-      <div className="bg-white p-3 shadow-sm rounded-sm">
+      <div className="bg-white p-3 shadow-sm rounded-sm ">
         <div className="flex items-center space-x-2 font-semibold text-gray-900 leading-8">
           <span className="text-green-500">
             <svg
@@ -47,7 +47,7 @@ const UserDetails = () => {
           <span className="tracking-wide">About</span>
         </div>
         <div className="text-gray-700">
-          <div className="grid md:grid-cols-2 text-sm">
+          <div className="grid md:grid-cols-2  text-sm">
             <div className="grid grid-cols-2">
               <div className="px-4 py-2 font-semibold">Full Name</div>
               <div className="px-4 py-2">{user.displayName}</div>

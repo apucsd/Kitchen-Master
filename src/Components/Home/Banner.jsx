@@ -18,7 +18,7 @@ const Banner = () => {
           Unleash Your Culinary Potential with Chef Master: The Ultimate
           Resource for Professional and Home Cooks Alike
         </p>
-        <button className="btn btn-warning">View details</button>
+        <button className="btn btn-outline">View details</button>
       </div>
     </div>
   );

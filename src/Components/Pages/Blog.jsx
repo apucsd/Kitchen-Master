@@ -3,7 +3,7 @@ import Pdf from "react-to-pdf";
 const Blog = () => {
   const ref = useRef();
   return (
-    <div className="text-center my-12">
+    <div className="text-center my-12 mx-4">
       <Pdf targetRef={ref} filename="code-example.pdf">
         {({ toPdf }) => (
           <button onClick={toPdf}>
@@ -28,7 +28,7 @@ const Blog = () => {
           </button>
         )}
       </Pdf>
-      <div className="w-1/2 mx-auto" ref={ref}>
+      <div className="md:w-1/2 mx-auto" ref={ref}>
         <div className="shadow-lg p-4 my-4 border-t">
           <h1 className="font-semibold">
             Tell us the differences between uncontrolled and controlled
