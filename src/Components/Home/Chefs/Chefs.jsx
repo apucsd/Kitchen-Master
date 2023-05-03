@@ -15,12 +15,8 @@ const Chefs = () => {
   // console.log(chefs);
   if (loader) {
     return (
-      <div className="text-center">
-        <progress
-          className="progress progress-secondary w-56"
-          value="70"
-          max="100"
-        ></progress>
+      <div className="flex justify-center">
+        <h3 className="my-12  h-8 w-8 bg-blue-500 animate-spin"></h3>
       </div>
     );
   }

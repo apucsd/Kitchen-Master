@@ -1,14 +1,19 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { useNavigate } from "react-router-dom";
 
 const UserDetails = () => {
   const { isLoading, user } = useContext(AuthContext);
+  const navigate = useNavigate();
   if (isLoading) {
     return (
       <div className="flex justify-center">
         <h3 className="my-12  h-12 w-12 bg-blue-500 animate-spin"></h3>
       </div>
     );
+  }
+  if (!user) {
+    return navigate("/login");
   }
 
   //   console.log(user);
