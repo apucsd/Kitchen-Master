@@ -54,14 +54,6 @@ const Navbar = () => {
           >
             Blog
           </NavLink>
-          <NavLink
-            to="/contact"
-            className={({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "underline text-blue-600" : ""
-            }
-          >
-            Contact
-          </NavLink>
 
           {user ? (
             <div className="relative me-8">
