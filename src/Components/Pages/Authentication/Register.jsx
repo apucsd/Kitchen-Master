@@ -53,7 +53,7 @@ const Register = () => {
     <div>
       <div className="my-5">
         <div className="relative flex flex-col justify-center overflow-hidden my-4">
-          <div className="w-full p-6 m-auto bg-white rounded-md shadow-md ring-2 ring-gray-800/50 lg:max-w-xl">
+          <div className="w-full p-6 m-auto bg-white rounded-md shadow-md ring-2 ring-blue-400/50 lg:max-w-xl">
             <h1 className="text-3xl font-semibold text-center text-gray-700">
               Please register here
             </h1>
@@ -126,7 +126,7 @@ const Register = () => {
                     Login
                   </Link>
                 </span>
-                <button className="btn btn-block">Sign Up</button>
+                <button className="my-btn my-2">Sign Up</button>
               </div>
             </form>
             <RegisterWith></RegisterWith>

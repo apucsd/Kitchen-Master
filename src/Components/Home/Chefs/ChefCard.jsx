@@ -15,10 +15,10 @@ const ChefCard = ({ chef }) => {
     recipies,
   } = chef;
   return (
-    <div className="card w-96 bg-base-100 shadow-xl">
+    <div className="card bg-base-100 shadow-xl">
       <figure>
-        <LazyLoad width={1024} height={200} threshold={1}>
-          <img src={chef_picture} alt="chefs" />
+        <LazyLoad height={200} threshold={0.99}>
+          <img className="w-full" src={chef_picture} alt="chefs" />
         </LazyLoad>
       </figure>
       <div className="card-body">
@@ -41,7 +41,7 @@ const ChefCard = ({ chef }) => {
         </div>
         <div className="card-actions w-full">
           <Link className="w-full" to={`chef-recipes/${id}`}>
-            <button className="btn btn-warning  w-full">View recipes</button>
+            <button className="my-btn">View Recipes</button>
           </Link>
         </div>
       </div>

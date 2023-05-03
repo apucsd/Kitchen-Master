@@ -30,7 +30,7 @@ const FeedBack = () => {
         <SwiperSlide>
           <div className="shadow-lg md:md:md:p-20 p-3 ">
             <h1>
-              First time in Chef Master and YOU have to go! It's the cutest
+              First time in Kitchen Master and YOU have to go! It's the cutest
               little spot with amazing food. The Foie Gras is to die for. IT WAS
               FIRE!! The service we received was so amazing and we will
               definitely be back again. They made us feel welcomed and gave us
@@ -47,7 +47,7 @@ const FeedBack = () => {
         <SwiperSlide>
           <div className="shadow-lg md:md:md:p-20 p-3 ">
             <h1>
-              First time in Chef Master and YOU have to go! It's the cutest
+              First time in Kitchen Master and YOU have to go! It's the cutest
               little spot with amazing food. The Foie Gras is to die for. IT WAS
               FIRE!! The service we received was so amazing and we will
               definitely be back again. They made us feel welcomed and gave us
@@ -64,7 +64,7 @@ const FeedBack = () => {
         <SwiperSlide>
           <div className="shadow-lg md:md:md:p-20 p-3 ">
             <h1>
-              First time in Chef Master and YOU have to go! It's the cutest
+              First time in Kitchen Master and YOU have to go! It's the cutest
               little spot with amazing food. The Foie Gras is to die for. IT WAS
               FIRE!! The service we received was so amazing and we will
               definitely be back again. They made us feel welcomed and gave us

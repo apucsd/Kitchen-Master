@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
-
+import { FaHeart } from "react-icons/fa";
 const Recipe = ({ recipe }) => {
   const [isFav, setIsFav] = useState(false);
   const handleFavorite = () => {
@@ -31,16 +31,17 @@ const Recipe = ({ recipe }) => {
       </div>
       <div className="md:text-end text-center p-4 bg-slate-50 w-full h-full flex items-center justify-center">
         <div>
-          <p className="text-slate-600 text-xl my-4 text-center">
-            Rating: {recipe.rating}
-          </p>
+          <div className="text-slate-600 text-xl my-4 text-center">
+            <p>
+              <strong>Rating Overview</strong>
+            </p>
+            <p className="text-4xl font-bold">{recipe.rating}</p>
+          </div>
 
-          <button
-            disabled={isFav}
-            onClick={handleFavorite}
-            className="btn btn-dark"
-          >
-            Add To Favorite
+          <button disabled={isFav} onClick={handleFavorite} className="my-btn">
+            <span className="flex items-center gap-1">
+              Add To Favorite <FaHeart className=" text-xl"></FaHeart>
+            </span>
           </button>
         </div>
       </div>

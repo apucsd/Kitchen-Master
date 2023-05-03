@@ -8,17 +8,22 @@ const Banner = () => {
         <Lottie className="md:h-[100vh]" animationData={chef} loop={true} />
       </div>
       <div className="text-start px-4">
-        <h2 className="text-4xl font-semibold">
+        <h2 className="md:text-4xl text-2xl font-semibold">
           Mastering the Art of Culinary Excellence with{" "}
-          <span className="text-6xl block my-3 text-fuchsia-500">
-            Chef Master
+          <span className="text-5xl block my-3 text-fuchsia-500 ">
+            Kitchen Master
           </span>
         </h2>
         <p className="text-slate-600 my-6">
-          Unleash Your Culinary Potential with Chef Master: The Ultimate
-          Resource for Professional and Home Cooks Alike
+          <small>
+            {" "}
+            Unleash Your Culinary Potential with Kitchen Master: The Ultimate
+            Resource for Professional and Home Cooks Alike.
+          </small>
         </p>
-        <button className="btn btn-outline">View details</button>
+        <div className="md:w-[25%]">
+          <button className="my-btn">View Details</button>
+        </div>
       </div>
     </div>
   );

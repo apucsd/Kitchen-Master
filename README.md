@@ -1,4 +1,4 @@
-- A Chef Master website is a platform for sharing cooking knowledge and recipes from expert chefs.
+- A Kitchen Master website is a platform for sharing cooking knowledge and recipes from expert chefs.
 - This website gives cooking knowledge and recipes from expert chefs
 - Key features of the website:
   > - Our chef Details
