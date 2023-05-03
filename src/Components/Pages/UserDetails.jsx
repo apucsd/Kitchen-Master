@@ -2,14 +2,15 @@ import React, { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const UserDetails = () => {
-  const { user } = useContext(AuthContext);
-  if (!user) {
+  const { isLoading, user } = useContext(AuthContext);
+  if (isLoading) {
     return (
       <div className="flex justify-center">
         <h3 className="my-12  h-12 w-12 bg-blue-500 animate-spin"></h3>
       </div>
     );
   }
+
   //   console.log(user);
   return (
     <div className="flex gap-1 m-8">
@@ -69,7 +70,7 @@ const UserDetails = () => {
               <div className="px-4 py-2 font-semibold">Email.</div>
               <div className="px-4 py-2">
                 <a className="text-blue-800" href="mailto:jane@example.com">
-                  {user.email ? email : "example@gmail.com"}
+                  {user.email ? user.email : "example@gmail.com"}
                 </a>
               </div>
             </div>
