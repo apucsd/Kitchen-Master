@@ -1,15 +1,16 @@
-import React, { useState } from "react";
-import Swal from "sweetalert2/dist/sweetalert2.js";
-import "sweetalert2/dist/sweetalert2.css";
+import React, { useRef, useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
+
 const Recipe = ({ recipe }) => {
   const [isFav, setIsFav] = useState(false);
   const handleFavorite = () => {
-    Swal.fire("Added to favorites items");
+    toast.success("Added item to favorite.");
     setIsFav(true);
   };
   return (
     <div className="w-full grid md:grid-cols-3 justify-around gap-4 items-center shadow-lg  p-4 md:m-8">
       <div className="md:col-span-2 p-3">
+        <Toaster />
         <h1 className="card-title my-2">{recipe.recipe_name}</h1>
         <div className="flex items-center gap-4">
           <h1 className="font-semibold">Cooking Method:</h1>

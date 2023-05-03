@@ -16,7 +16,13 @@ const Register = () => {
     const password = form.password.value;
     const confirmPassword = form.confirmPassword.value;
     // password verification
-    console.log(name, email, password, confirmPassword, photoURL);
+    // console.log(name, email, password, confirmPassword, photoURL);
+    if (!password) {
+      return Swal.fire("Enter a password");
+    }
+    if (!email) {
+      return Swal.fire("Enter a email");
+    }
 
     if (password !== confirmPassword) {
       return Swal.fire("Password doesn't match");
@@ -35,17 +41,16 @@ const Register = () => {
           displayName: name,
           photoURL: photoURL,
         });
-        Swal.fire("Your account has been created");
+        Swal.fire("Your account has created");
         // console.log(result.user);
       })
       .catch((error) => {
-        console.log(error);
+        Swal.fire("Your account has already been created");
       });
   };
 
   return (
     <div>
-      {" "}
       <div className="my-5">
         <div className="relative flex flex-col justify-center overflow-hidden my-4">
           <div className="w-full p-6 m-auto bg-white rounded-md shadow-md ring-2 ring-gray-800/50 lg:max-w-xl">
@@ -70,7 +75,6 @@ const Register = () => {
                   <span className="text-base label-text">Email</span>
                 </label>
                 <input
-                  required
                   type="text"
                   placeholder="Email Address"
                   className="w-full input input-bordered"
@@ -94,7 +98,6 @@ const Register = () => {
                   <span className="text-base label-text">Password</span>
                 </label>
                 <input
-                  required
                   type="password"
                   placeholder="Enter Password"
                   className="w-full input input-bordered"

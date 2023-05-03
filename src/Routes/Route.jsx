@@ -44,7 +44,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/chef-recipes/${params.id}`),
+          fetch(
+            `https://chef-master-server-apucsd.vercel.app/chef-recipes/${params.id}`
+          ),
       },
     ],
   },

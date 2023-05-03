@@ -12,7 +12,7 @@ const RegisterWith = () => {
   const handleGoogleSignIn = () => {
     googleSignIn()
       .then((result) => {
-        Swal.fire("Your account has been created");
+        Swal.fire("Your login has been successful");
         navigate(from, { replace: true });
       })
       .catch((error) => {
@@ -22,7 +22,7 @@ const RegisterWith = () => {
   const handleGithubSignIn = () => {
     githubSignIn()
       .then((result) => {
-        Swal.fire("Your account has been created");
+        Swal.fire("Your login has been successful");
         navigate(from, { replace: true });
       })
       .catch((error) => {

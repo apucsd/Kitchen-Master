@@ -1,6 +1,7 @@
 import React from "react";
 import { HiHandThumbUp } from "react-icons/hi2";
 import { Link } from "react-router-dom";
+
 const ChefCard = ({ chef }) => {
   const {
     id,
@@ -15,7 +16,7 @@ const ChefCard = ({ chef }) => {
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
       <figure>
-        <img src={chef_picture} alt="Shoes" />
+        <img src={chef_picture} alt="chefs" />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{chef_name}</h2>
