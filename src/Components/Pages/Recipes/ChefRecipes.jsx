@@ -1,5 +1,5 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { ScrollRestoration, useLoaderData } from "react-router-dom";
 
 import Recipe from "./Recipe";
 
@@ -59,6 +59,7 @@ const ChefRecipes = () => {
           </div>
         </div>
       </section>
+      <ScrollRestoration></ScrollRestoration>
     </div>
   );
 };
