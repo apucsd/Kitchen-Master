@@ -40,14 +40,15 @@ const Navbar = () => {
   };
 
   return (
-    <div className=" bg-slate-100 font-propines p-2 relative">
+    <div className=" font-propines p-2 relative">
       <div className="flex items-center justify-between mx-8">
         <div>
           <Link
             to="/"
             className="text-xl font-serif text-blue-600 uppercase tracking-wide leading-tight"
           >
-            <MdFastfood className="text-3xl"></MdFastfood> Kitchen Master
+            <img src="/Logo.svg" alt="" />
+            Kitchen Master
           </Link>
         </div>
         <div
@@ -81,6 +82,17 @@ const Navbar = () => {
 
           <NavLink
             onClick={() => setOpen(!open)}
+            to="/about"
+            className={({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "underline text-blue-600" : ""
+            }
+          >
+            <span className="flex items-center">
+              About <HiOutlineChevronRight />
+            </span>
+          </NavLink>
+          <NavLink
+            onClick={() => setOpen(!open)}
             to="/blog"
             className={({ isActive, isPending }) =>
               isPending ? "pending" : isActive ? "underline text-blue-600" : ""
@@ -90,6 +102,7 @@ const Navbar = () => {
               Blog <HiOutlineChevronRight />
             </span>
           </NavLink>
+          <span>+1(909) 642-7843</span>
 
           {user ? (
             <div className="relative me-8">
@@ -119,6 +132,7 @@ const Navbar = () => {
                       {user?.displayName}
                     </Link>
                   </li>
+                  <li></li>
                   <li
                     onClick={() => {
                       setMouseOver(false);
@@ -139,11 +153,9 @@ const Navbar = () => {
           ) : (
             <Link to="/login">
               <div>
-                <Button>
-                  <span className="flex gap-2 items-center">
-                    Login <MdAccountBox className="text-2xl" />
-                  </span>
-                </Button>
+                <button className="btn btn-outline btn-success hover:text-white">
+                  Sign In
+                </button>
               </div>
             </Link>
           )}

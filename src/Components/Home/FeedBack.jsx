@@ -12,7 +12,7 @@ import { Pagination, Navigation } from "swiper";
 
 const FeedBack = () => {
   return (
-    <div className="md:w-1/2 mx-auto my-8 bg-white rounded md:p-4">
+    <div className=" mx-auto my-8 bg-white rounded md:p-4">
       <div className="text-center my-8">
         <h2 className=" text-xl">----CUSTOMER FEEDBACK----</h2>
         <h1 className="text-4xl font-serif  my-4">

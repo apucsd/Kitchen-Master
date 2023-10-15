@@ -51,11 +51,14 @@ const Register = () => {
 
   return (
     <div>
-      <div className="my-5">
+      <div className="my-10 bg-[#FEEDEA]">
         <div className="relative flex flex-col justify-center overflow-hidden my-4">
           <div className="w-full p-6 m-auto bg-white rounded-md shadow-md ring-2 ring-blue-400/50 lg:max-w-xl">
+            <div className="flex justify-center">
+              <img src="/public/Logo.svg" alt="" />
+            </div>
             <h1 className="text-3xl font-semibold text-center text-gray-700">
-              Please register here
+              Kitchen Master
             </h1>
             <form onSubmit={handleRegister} className="space-y-4">
               <div>

@@ -41,7 +41,9 @@ const ChefCard = ({ chef }) => {
         </div>
         <div className="card-actions w-full">
           <Link className="w-full" to={`chef-recipes/${id}`}>
-            <button className="my-btn">View Recipes</button>
+            <button className="btn w-full btn-outline btn-success">
+              View Receipe
+            </button>
           </Link>
         </div>
       </div>

@@ -26,11 +26,14 @@ const Login = () => {
       });
   };
   return (
-    <div className="my-2">
+    <div className="my-2 bg-[#FEEDEA]">
       <div className="relative flex flex-col justify-center h-screen overflow-hidden">
-        <div className="w-full p-6 m-auto bg-white rounded-md shadow-md ring-2 ring-blue-400/50 lg:max-w-lg">
+        <div className="w-full p-6 m-auto bg-[white] rounded-md shadow-md ring-2 ring-blue-400/50 lg:max-w-lg">
+          <div className="flex justify-center">
+            <img src="/Logo.svg" alt="" />
+          </div>
           <h1 className="text-3xl font-semibold text-center text-gray-700">
-            Please login here
+            Kitchen Master
           </h1>
           <form onSubmit={handleLogin} className="space-y-4">
             <div>
